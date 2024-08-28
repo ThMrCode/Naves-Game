@@ -103,9 +103,11 @@ void Controler::funcionEnemy()
 	for (int i = 0; i < this->enemys.size(); i++)
 	{
 		if (this->enemys[i]->y > (this->heigth - 4)) {
+			delete enemys[i];
 			enemys_delete.push(i);
 		}
 	}
+	enemys.pop(enemys_delete);
 	// Generador de disparos y mostrador
 	for (int i = 0; i < this->enemys.size(); i++)
 	{
